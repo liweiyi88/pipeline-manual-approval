@@ -7,8 +7,6 @@ export class PipelineManualApprovalStack extends Stack {
   constructor(scope: Construct, id: string, props?: StackProps) {
     super(scope, id, props);
 
-    // The code that defines your stack goes here
-
     // example resource
     new Queue(this, 'PipelineManualApprovalQueue', {
       visibilityTimeout: Duration.seconds(300)
