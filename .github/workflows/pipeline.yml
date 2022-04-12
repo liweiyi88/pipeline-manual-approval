@@ -25,6 +25,7 @@ jobs:
           AWS_DEFAULT_REGION: 'ap-southeast-2'
 
   deploy_to_dev:
+    needs: cdk_diff
     environment:
         name: development
     runs-on: ubuntu-latest
