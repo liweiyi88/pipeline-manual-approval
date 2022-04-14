@@ -35,7 +35,7 @@ jobs:
       - name: Deploy to dev environment
         run: echo Deploying to dev environment.
   deploy_to_staging:
-    needs: cdk_diff
+    needs: deploy_to_dev
     environment:
         name: staging
     runs-on: ubuntu-latest
